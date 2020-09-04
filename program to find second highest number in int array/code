@@ -1,0 +1,32 @@
+public class withoutloop { 
+
+	public static void print2largest(int array[], int array_size) 
+	{ 
+		int i, first, second; 
+		if (array_size < 2) { 
+			System.out.print("not valid"); 
+			return; 
+		} 
+
+		first = second = Integer.MIN_VALUE; 
+		for (i = 0; i < array_size; i++) { 
+			if (array[i] > first) { 
+				second = first; 
+				first = array[i]; 
+			} 
+			else if (array[i] > second && array[i] != first) 
+				second = array[i]; 
+		} 
+		if (second == Integer.MIN_VALUE) 
+			System.out.print("There is no second largest element\n"); 
+		else
+			System.out.print("second largest element is " + second); 
+	} 
+
+	public static void main(String[] args) 
+	{ 
+		int arr[] = { 2, -5, 6, 1, -8, 0, 4, 9 }; 
+		int n = arr.length; 
+		print2largest(arr, n); 
+	} 
+} 
