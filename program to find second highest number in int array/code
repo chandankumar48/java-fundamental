@@ -1,6 +1,6 @@
 public class withoutloop { 
 
-	public static void print2largest(int array[], int array_size) 
+	public static void largest(int array[], int array_size) 
 	{ 
 		int i, first, second; 
 		if (array_size < 2) { 
@@ -27,6 +27,6 @@ public class withoutloop {
 	{ 
 		int arr[] = { 2, -5, 6, 1, -8, 0, 4, 9 }; 
 		int n = arr.length; 
-		print2largest(arr, n); 
+		largest(arr, n); 
 	} 
 } 
